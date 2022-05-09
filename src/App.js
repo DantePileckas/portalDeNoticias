@@ -1,11 +1,12 @@
 import React, {Component} from "react";
-import Header from "./componentes/Header"
+import Header from "./componentes/Header";
+import Noticias from "./componentes/Noticias";
 
 class App extends Component{
   
- /*  state = {
+   state = {
     noticias: []
-  } */
+  } 
 
   componentDidMount(){
     this.consultarNoticias();
@@ -18,7 +19,7 @@ class App extends Component{
  */
     fetch(url)
     .then(respuesta=>{
-      return respuesta.json
+      return respuesta.json()
     })
     .then(noticias =>{
 /*       console.log(noticias.articles)
@@ -31,11 +32,15 @@ class App extends Component{
 
   render(){ 
   return (
-    <div className="App">
-      <Header
-      titulo = 'Noticias'
-      />
-
+    <div className="contenedor-app">
+        <Header
+        titulo = 'Noticias'
+        />
+      <div className="container white contenedor-noticias">
+        <Noticias 
+        noticias = {this.state.noticias}
+        />
+     </div> 
     </div>
   );
 }
