@@ -21,7 +21,7 @@ class Formulario extends Component {
                          <form onSubmit={this.cambiarCategoria}>
                               <h2>Noticias por Categoria</h2>
                               <div className="input-field col s12 m8">
-                                   <select className='select' ref={this.categoriaRef}>
+                                   <select ref={this.categoriaRef}>
                                         <option value="general" defaultValue>General</option>
                                         <option value="business">Negocios</option>
                                         <option value="entertainment">Entretenimiento</option>

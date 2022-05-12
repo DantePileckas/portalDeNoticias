@@ -14,7 +14,7 @@ class App extends Component{
   }
 
   consultarNoticias = (categoria = 'general') => {
-    let url = 'https://newsapi.org/v2/top-headlines?country=ar&category=general&apiKey=9c8713da4065456184a1e5bbc953c940';
+    let url = `https://newsapi.org/v2/top-headlines?country=ar&category=${categoria}&apiKey=9c8713da4065456184a1e5bbc953c940`;
   
 /*     console.log(url)
  */
@@ -44,6 +44,7 @@ class App extends Component{
         <Noticias 
         noticias = {this.state.noticias}
         />
+
      </div> 
     </div>
   );
